@@ -6,57 +6,59 @@
     <meta name="viewport" content="width=s, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <header>
     <h1>Pizza</h1>
     <h2>Manyatta</h2>
+    <h3>Welcome</h3>
+    </header>
 </head>
 <body>
     <form id="orderForm">
         <h3>Size:</h3>
         <br>
       
-            small:<input type="radio" name="size" id="smallPizza">
-            medium:<input type="radio" name="size" id="mediumPizza">
-            large:<input type="radio" name="size" id="largePizza">
+            small:<input type="radio" id="size" name ="size" value="small" required>
+            medium:<input type="radio" id="size" name ="size" value="medium" required>
+            large:<input type="radio" id="size" name ="size" value="large" required>
         <br>
         <h3>Crust:</h3>
         <br>
       
-            basic:<input type="radio" name="Crust" id="basicCrust">
-            crispy:<input type="radio" name="Crust" id="crispyCrust">
-            stuffed:<input type="radio" name="Crust" id="stuffedCrust">    
-            glutten free:<input type="radio" name="Crust" id="guttenFreeCrust"> 
+            basic:<input type="radio" id="Crust" name ="crust" value="basic" required>
+            crispy:<input type="radio" id="Crust" name ="crust" value="crispy" required>
+            stuffed:<input type="radio" id="Crust" name ="crust" value="stuffed" required>    
+            glutten free:<input type="radio" id="Crust" name ="crust" value="gluttenfree" required> 
         <br>
         <h3>Topping:</h3>
         <br>
       
-            chicken:<input type="radio" name="topping" id="chickenTopping">
-            vagetables:<input type="radio" name="topping"  id="vagetablesTopping">
-            beef:<input type="radio" name="topping"  id="beefTopping">    
-            mushroom:<input type="radio" name="topping"  id="mushroomTopping"> 
+            chicken:<input type="radio" id="topping" name ="topping"  value="chicken" required>
+            vagetables:<input type="radio" id="topping" name ="topping" value="vagetables" required>
+            beef:<input type="radio"id="topping" name ="topping" value="beef" required>    
+            mushroom:<input type="radio" id="topping"  name ="topping" value="mushroom" required> 
             <br>
+            <h3>Do you wish to have the pizza delivered:</h3>
+      
+            <div class="acceptDelivery" onclick="acceptDelivery()"> Yes:<input type="radio" name="deliveryDetails" id="deliveryDetails" value="acceptDelivery"  required></div>
+            <div class="acceptDelivery" onclick="denyDelivery()">No:<input type="radio" name="deliveryDetails" id="deliveryDetails" value="denyDelivery" required></div>
+        <h3>How many pizzas do you want:</h3>
+        <br>
+      
+            Enter Number:<input type="text" id="numberOfPizzas" required>
+        <br>
+        <div class="divv"onclick="totalCost()">submit</div>
+        <br>
         <h3>Total:</h3>
+        <div id="total-Cost"></div>
+        
         <br>
-      
-            Total is:<input type="text" id="orderTotal">
-            
-        <h3>Delivery:</h3>
-        <br>
-      
-            Yes:<input type="radio" name="deliveryDetails" id="delivery">
-            No:<input type="radio" name="deliveryDetails" id="noDelivery">
-        <h3>How many do you want:</h3>
-        <br>
-      
-            Enter Number:<input type="text" id="numberOfPizzas">
-        <br>
-        <a href="checkout.html" class="href">
-        <button name = submit id="submitOrderBtn" >>CHECK OUT</button>
-        </a>
+        <a href="checkout.html">checkout</a>
+        
             
     
     
     </form>
 
-    
+    <script src="index.js"></script>
 </body>
 </html>
