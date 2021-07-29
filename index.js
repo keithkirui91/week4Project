@@ -1,14 +1,8 @@
-
-
-
 function acceptDelivery(){
     var location = prompt("Enter Your Location");
     while(location === ''){
         location = prompt("note::Location is required");
     }
-    
-
-
     
     alert("Your Delivery cost is 100sh. Pizza will be delivered to your location")
 }
@@ -17,6 +11,109 @@ function denyDelivery(){
 }
 
 
+class Order{
+    constructor(size, crust, topping, delivery){
+        this.size = size;
+        this.crust = crust;
+        this.topping = topping;
+        this.delivery = delivery;
+
+    }
+}
+class UI{
+    static displayOrder(){
+        const StoredOrders = [
+         
+        ];
+        const orders = StoredOrders;
+
+        orders.forEach((order)=> UI.addOrderToList(order));
+    }
+    static addOrderToList(order){
+        const list = document.querySelector('#order-list');
+
+        const row = document.createElement('tr');
+
+        row.innerHTML = `
+        <td>${order.size}</td>
+        <td>${order.crust}</td>
+        <td>${order.topping}</td>
+        <td>${order.delivery}</td>
+        <td><a href = "#" class="btn">x</a></td>
+
+        `;
+        list.appendChild(row);
+    }
+}
+//display order
+document.addEventListener('DOMContentLoaded', UI.displayOrder);
+
+
+document.querySelector('#orderForm').addEventListener('submit', (e) =>{
+
+    e.preventDefault();
+    const mysize = document.getElementsByName('size');
+    const mycrust = document.getElementsByName('crust');
+    const mytopping = document.getElementsByName('topping');
+    const mydeliveryDetails = document.getElementsByName('deliveryDetails');
+
+    if(mysize[0].checked){
+        var size = "small";
+    
+    }
+    else if(mysize[1].checked){
+        var size = "medium";
+    }
+    else if(mysize[2].checked){
+        var size = "large";
+    }
+
+
+
+    if(mycrust[0].checked){
+        var crust = "basic";
+    }
+    else if(mycrust[1].checked){
+        var crust = "crispy";
+    }
+    else if(mycrust[2].checked){
+        var crust = "stuffed";
+    }
+    else if(mycrust[3].checked){
+        var crust = "gluttenfree";
+    }
+    
+    
+    
+    if(mytopping[0].checked){
+        var topping = "chicken";
+    }
+    else if(mytopping[1].checked){
+        var topping = "beef";
+    }
+    else if(mytopping[2].checked){
+        var topping = "vagetables";
+    }
+    else if(mytopping[3].checked){
+        var topping = "mushroom";
+    }
+    if(mydeliveryDetails[0].checked){
+        var delivery = "count on us ...we will deliver FASTTT";
+    }
+    else if(mydeliveryDetails[1].checked){
+        var delivery = "Somebody come get her shes dancing like a str#$%er";
+    }
+
+
+
+
+
+  //add order
+    const order = new Order(size, crust, topping, delivery);
+
+    UI.addOrderToList(order);
+
+});
 
 
 
@@ -84,9 +181,6 @@ else if(deliveryDetails[1].checked){
 
     const totalCost = document.getElementById('total-Cost');
     totalCost.innerHTML = ("its"+ x) ;
-
-    
-
 
 }
 
