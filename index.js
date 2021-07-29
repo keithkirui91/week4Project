@@ -16,78 +16,73 @@ function denyDelivery(){
     alert("Pizza is ready for pickup at our Location");
 }
 
+function totalPrice(){
+
+var size = document.getElementsByName("size");
 
 
-const size = document.getElementById("size").value;
+var crust = document.getElementsByName("crust");
 
 
-const crust = document.getElementById("crust").value;
+var topping = document.getElementsByName("topping");
+
+var deliveryfee = document.getElementsByName("deliveryDetails");
 
 
-const topping = document.getElementById("topping").value;
-
-const delivert = document.getElementById("deliveryDetails").value;
-
-var sizeprice = 0;
-var crustprice = 0;
-var toppingprice = 0;
-var deliveryfee = 0;
-var x  = 0;
-
-if(size === "small"){
-    sizeprice = 600;
+if(size[0].checked){
+    var sizeprice = size[0].value;
+    
 }
-else if(size === "medium"){
-    sizeprice = 800;
+else if(size[1].checked){
+    var sizeprice = size[1].value;
 }
-else if(size === "large"){
-    sizeprice = 1000;
+else if(size[2].checked){
+    var sizeprice = size[2].value;
 }
 
 
-if(crust === "basic"){
-    crustprice = 0;
+if(crust[0].checked){
+    var crustprice = crust[0].value;
 }
-else if(crust === "crispy"){
-    crustprice = 100;
+else if(crust[1].checked){
+    var crustprice = crust[1].value;
 }
-else if(crust === "stuffed"){
-    crustprice = 150;
+else if(crust[2].checked){
+    var crustprice = crust[2].value;
 }
-else if(crust === "gluttenfree"){
-    crustprice = 50;
+else if(crust[3].checked){
+    var crustprice = crust[3].value;
 }
 
 
 
-if(topping === "chicken"){
-    toppingprice = 300;
+if(topping[0].checked){
+    var toppingprice = topping[0].value;
 }
-else if(topping === "beef"){
-    toppingprice = 250;
+else if(topping[1].checked){
+    var toppingprice = topping[1].value;
 }
-else if(topping === "vagetables"){
-    toppingprice = 150;
+else if(topping[2].checked){
+    var toppingprice = topping[2].value;
 }
-else if(topping === "mushroom"){
-    toppingprice = 200;
+else if(topping[3].checked){
+    var toppingprice = topping[3].value;
+}
+if(deliveryDetails[0].checked){
+    var deliveryfee = deliveryDetails[0].value;
+}
+else if(deliveryDetails[1].checked){
+    var deliveryfee = deliveryDetails[1].value;
 }
 
-if(deliveryDetails === "acceptDelivery"){
-    deliveryfee = 100;
-}
-else if(deliveryDetails === "denyDelivery"){
-    deliveryfee = 0;
-}
 
-function totalCost(){
     var x = crustprice + toppingprice + sizeprice + deliveryfee;
 
-    const totalCost = document.getElementById('total-Cost');
-    totalCost.innerHTML= "its"+ x;
+    //const totalCost = document.getElementById('total-Cost');
+    alert("its"+ x) ;
+
+
 }
-
-
 
 function acceptDelivery(){
     var location = prompt("Enter Your Location");

@@ -17,36 +17,36 @@
         <h3>Size:</h3>
         <br>
       
-            small:<input type="radio" id="size" name ="size" value="small" required>
-            medium:<input type="radio" id="size" name ="size" value="medium" required>
-            large:<input type="radio" id="size" name ="size" value="large" required>
+            small:<input type="radio" id="size" name ="size" value="600" required>
+            medium:<input type="radio" id="size" name ="size" value="800" required>
+            large:<input type="radio" id="size" name ="size" value="1000" required>
         <br>
         <h3>Crust:</h3>
         <br>
       
-            basic:<input type="radio" id="Crust" name ="crust" value="basic" required>
-            crispy:<input type="radio" id="Crust" name ="crust" value="crispy" required>
-            stuffed:<input type="radio" id="Crust" name ="crust" value="stuffed" required>    
-            glutten free:<input type="radio" id="Crust" name ="crust" value="gluttenfree" required> 
+            basic:<input type="radio" id="Crust" name ="crust" value="0" required>
+            crispy:<input type="radio" id="Crust" name ="crust" value="100" required>
+            stuffed:<input type="radio" id="Crust" name ="crust" value="150" required>    
+            glutten free:<input type="radio" id="Crust" name ="crust" value="50" required> 
         <br>
         <h3>Topping:</h3>
         <br>
       
-            chicken:<input type="radio" id="topping" name ="topping"  value="chicken" required>
-            vagetables:<input type="radio" id="topping" name ="topping" value="vagetables" required>
-            beef:<input type="radio"id="topping" name ="topping" value="beef" required>    
-            mushroom:<input type="radio" id="topping"  name ="topping" value="mushroom" required> 
+            chicken:<input type="radio" id="topping" name ="topping"  value="300" required>
+            vagetables:<input type="radio" id="topping" name ="topping" value="150" required>
+            beef:<input type="radio"id="topping" name ="topping" value="250" required>    
+            mushroom:<input type="radio" id="topping"  name ="topping" value="200" required> 
             <br>
             <h3>Do you wish to have the pizza delivered:</h3>
       
-            <div class="acceptDelivery" onclick="acceptDelivery()"> Yes:<input type="radio" name="deliveryDetails" id="deliveryDetails" value="acceptDelivery"  required></div>
-            <div class="acceptDelivery" onclick="denyDelivery()">No:<input type="radio" name="deliveryDetails" id="deliveryDetails" value="denyDelivery" required></div>
+            <div class="acceptDelivery" onclick="acceptDelivery()"> Yes:<input type="radio" name="deliveryDetails" id="deliveryDetails" value="100"  required></div>
+            <div class="acceptDelivery" onclick="denyDelivery()">No:<input type="radio" name="deliveryDetails" id="deliveryDetails" value="0" required></div>
         <h3>How many pizzas do you want:</h3>
         <br>
       
             Enter Number:<input type="text" id="numberOfPizzas" required>
         <br>
-        <div class="divv"onclick="totalCost()">submit</div>
+        <div class="divv"onclick="totalPrice()">submit</div>
         <br>
         <h3>Total:</h3>
         <div id="total-Cost"></div>
