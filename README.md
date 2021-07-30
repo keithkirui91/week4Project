@@ -28,7 +28,7 @@ Keith Kirui
 Kindly contact me on keith.kirui33@gmail.com if necessery.
 
 ## link to live site
-https://keithkirui91.github.io/week4project/
+https://keithkirui91.github.io/week4Project/
 
 
   
