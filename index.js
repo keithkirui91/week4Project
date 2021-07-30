@@ -46,7 +46,7 @@ class UI{
         <td>${order.number}</td>
         <td>${order.delivery}</td>
         <td>${order.ordertotal}</td>
-        <td><a href = "#" class="btn">x</a></td>
+        
 
         `;
         checkoutlist.appendChild(checkoutrow);
