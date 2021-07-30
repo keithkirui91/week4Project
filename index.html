@@ -44,11 +44,10 @@
         <h3>How many pizzas do you want:</h3>
       
         <br>
-        <div class="divv"onclick="totalPrice()">My Order price</div>
+        <div class="divv"onclick="totalPrice()">Current Order price</div>
         <br>
-        <h3>Total:</h3>
-        <div id="total-Cost"></div>
-
+        
+        <div id="total-Cost-one"></div>
         <br>
       
         How many Pizzas would you like:<input type="text" id="numberOfPizzas" value="1">
@@ -57,7 +56,7 @@
         <br>
         
         <input type="submit" value="addOrder">
-        <a href="checkout.html" class="">CHECKOUT</a>
+        
         <br>
         <table class="table">
             <thead>
@@ -65,13 +64,50 @@
                 <th>Size</th>
                 <th>Crust</th>
                 <th>Toppping</th>
+                <th>Number of pizzas</th>
                 <th>Delivery Info</th>
+                <th>total-Cost</th>
+                <th>Delete Order</th>
+                
+                
             </tr>
             </thead>
             <tbody id="order-list"></tbody>
         </table>
             
     </form>
+
+    <button data-modal-target="#modal">CHECKOUT</button>
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <div class="title">CHECKOUT</div>
+        <button data-close-button class="close-button">&times;</button>
+      </div>
+      <div class="modal-body">
+          
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Size</th>
+                <th>Crust</th>
+                <th>Toppping</th>
+                <th>Number</th>
+                <th>Delivery Info</th>
+                <th>Total</th>
+                <th>Delete Order</th>
+                
+            </tr>
+            </thead>
+            <tbody id="checkout-list"></tbody> 
+            
+            <br>
+           
+            
+        </table>
+        <a href="thankyou.html" class="href">Make Order</a>
+      </div>
+    </div>
+    <div id="overlay"></div>
  
 
     <script src="index.js"></script>
