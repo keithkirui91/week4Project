@@ -18,26 +18,29 @@
     <form id="orderForm">
         <h3>Size:</h3>
         <br>
-      
-            Small:<input type="radio" id="size" name ="size" value= 600 required>
-            Medium:<input type="radio" id="size" name ="size" value= 800 required>
-            Large:<input type="radio" id="size" name ="size" value= 1000  required>
+        <ul>
+            <li>Small:<br><input type="radio" id="size" name ="size" value= 600 required></li>
+            <li>Medium:<br><input type="radio" id="size" name ="size" value= 800 required></li>
+            <li>Large:<br><input type="radio" id="size" name ="size" value= 1000  required></li>
+        </ul>
         <br>
         <h3>Crust:</h3>
         <br>
-      
-            Basic:<input type="radio" id="Crust" name ="crust" value= 0 required>
-            Crispy:<input type="radio" id="Crust" name ="crust" value= 100 required>
-            Stuffed:<input type="radio" id="Crust" name ="crust" value= 150 required>    
-            Glutten free:<input type="radio" id="Crust" name ="crust" value= 50 required> 
+        <ul>
+            <li>Basic:<br><input type="radio" id="Crust" name ="crust" value= 0 required></li>
+            <li>Crispy:<br><input type="radio" id="Crust" name ="crust" value= 100 required></li>
+            <li>Stuffed:<br><input type="radio" id="Crust" name ="crust" value= 150 required></li>
+            <li>Glutten free:<br><input type="radio" id="Crust" name ="crust" value= 50 required></li>
+        </ul>
         <br>
         <h3>Topping:</h3>
         <br>
-      
-            Chicken:<input type="radio" id="topping" name ="topping"  value= 300 required>
-            Vagetables:<input type="radio" id="topping" name ="topping" value= 150 required>
-            Beef:<input type="radio"id="topping" name ="topping" value= 250 required>    
-            Mushroom:<input type="radio" id="topping"  name ="topping" value= 200 required> 
+        <ul>
+            <li>Chicken:<br><input type="radio" id="topping" name ="topping"  value= 300 required></li>
+            <li>Vagetables:<br><input type="radio" id="topping" name ="topping" value= 150 required></li>
+            <li>Beef:<br><input type="radio"id="topping" name ="topping" value= 250 required></li>    
+            <li>Mushroom:<br><input type="radio" id="topping"  name ="topping" value= 200 required></li>
+        </ul> 
             <br>
             <h3>Do you wish to have the pizza delivered:</h3>
       
@@ -48,7 +51,8 @@
         <div class="enterNumberDiv">How many Pizzas would you like:<br><input type="text" id="numberOfPizzas" value="1"></div>
       
         <br>
-        <div class="divv"onclick="totalPrice()">Current Order price</div>
+       
+        <div id ="pricebtn" onclick="totalPrice()">Current Order Price</div>
         <br>
         
         <div id="total-Cost-one"></div>
@@ -77,7 +81,7 @@
     <div class="modal" id="modal">
       <div class="modal-header">
         <div class="title">CHECKOUT</div>
-        <button data-close-button class="close-button">&times;</button>
+        <button data-close-button class="close-button">x</button>
       </div>
       <div class="modal-body">
           
