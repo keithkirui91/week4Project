@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <a href="index.html" class="">
+    <header>
+    <h1>Pizza</h1>
+    <h2>Manyatta</h2>
+    
+</a>
+    </header>
+</head>
+<body>
+    <form id="orderForm">
+        <h3>Size:</h3>
+        <br>
+      
+            Small:<input type="radio" id="size" name ="size" value= 600 required>
+            Medium:<input type="radio" id="size" name ="size" value= 800 required>
+            Large:<input type="radio" id="size" name ="size" value= 1000  required>
+        <br>
+        <h3>Crust:</h3>
+        <br>
+      
+            Basic:<input type="radio" id="Crust" name ="crust" value= 0 required>
+            Crispy:<input type="radio" id="Crust" name ="crust" value= 100 required>
+            Stuffed:<input type="radio" id="Crust" name ="crust" value= 150 required>    
+            Glutten free:<input type="radio" id="Crust" name ="crust" value= 50 required> 
+        <br>
+        <h3>Topping:</h3>
+        <br>
+      
+            Chicken:<input type="radio" id="topping" name ="topping"  value= 300 required>
+            Vagetables:<input type="radio" id="topping" name ="topping" value= 150 required>
+            Beef:<input type="radio"id="topping" name ="topping" value= 250 required>    
+            Mushroom:<input type="radio" id="topping"  name ="topping" value= 200 required> 
+            <br>
+            <h3>Do you wish to have the pizza delivered:</h3>
+      
+            <div class="acceptDelivery" > Yes:<input type="radio"onclick="acceptDelivery()" name="deliveryDetails" id="deliveryDetails" value= 100  required></div>
+            <div class="acceptDelivery" >No:<input type="radio"onclick="denyDelivery()" name="deliveryDetails" id="deliveryDetails" value= 0 required></div>
+            
+            
+        <div class="enterNumberDiv">How many Pizzas would you like:<br><input type="text" id="numberOfPizzas" value="1"></div>
+      
+        <br>
+        <div class="divv"onclick="totalPrice()">Current Order price</div>
+        <br>
+        
+        <div id="total-Cost-one"></div>
+        <br>
+    
+        <input id= "submitbtn" type="submit" value="Add Order ">
+        
+        <br>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Size</th>
+                <th>Crust</th>
+                <th>Toppping</th>
+                <th>Number of pizzas</th>
+                <th>Delivery Info</th>
+                <th>total-Cost</th>
+            </tr>
+            </thead>
+            <tbody id="order-list"></tbody>
+        </table>
+            
+    </form>
+
+    <button id="checkoutbtn"data-modal-target="#modal">CHECKOUT</button>
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <div class="title">CHECKOUT</div>
+        <button data-close-button class="close-button">&times;</button>
+      </div>
+      <div class="modal-body">
+          
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Size</th>
+                <th>Crust</th>
+                <th>Toppping</th>
+                <th>Number</th>
+                <th>Delivery Info</th>
+                <th>Total</th>
+               
+                
+            </tr>
+            </thead>
+            <tbody id="checkout-list"></tbody> 
+            
+            <br>
+           
+            
+        </table>
+        <a href="thankyou.html" class="href">Make Order</a>
+      </div>
+    </div>
+    <div id="overlay"></div>
+ 
+
+    <script src="index.js"></script>
+</body>
+</html>

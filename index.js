@@ -34,7 +34,6 @@ class UI{
         <td>${order.number}</td>
         <td>${order.delivery}</td>
         <td>${order.ordertotal}</td>
-        <td><a href = "#" class="btn">x</a></td>
 
         `;
         list.appendChild(row);
@@ -65,6 +64,7 @@ document.querySelector('#orderForm').addEventListener('submit', (e) =>{
     const mytopping = document.getElementsByName('topping');
     const number = parseInt(document.getElementById('numberOfPizzas').value);
     const mydeliveryDetails = document.getElementsByName('deliveryDetails');
+    
 
    
 var size = document.getElementsByName("size");
@@ -167,10 +167,10 @@ else if(deliveryDetails[1].checked){
         var topping = "mushroom";
     }
     if(mydeliveryDetails[0].checked){
-        var delivery = "count on us ...we will deliver FASTTT";
+        var delivery = "Deliver to doorstep";
     }
     else if(mydeliveryDetails[1].checked){
-        var delivery = "Somebody come get her shes dancing like a str#$%er";
+        var delivery = "Pick up at our location";
     }
 
 
@@ -198,10 +198,10 @@ function acceptDelivery(){
         location = prompt("note::Location is required");
     }
     
-    alert("Your Delivery cost is 100sh. Pizza will be delivered to your location")
+    alert("Your Delivery cost is 100sh. Pizza will be delivered to "+location)
 }
 function denyDelivery(){
-    alert("Pizza is ready for pickup at our Location");
+    alert("Pizza will be ready for pickup at our Location in 5 minutes");
 }
 
 

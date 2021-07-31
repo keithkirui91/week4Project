@@ -1,11 +1,109 @@
-*, *::after, *::before {
-    box-sizing: border-box;
-  }
+html{
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+header{
+  background-color: black;
+  text-align: center;
+  padding: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  width: 90%;
+  line-height: 2rem;
   
+  
+
+}
+a{
+  color: rgb(255, 0, 0);
+  text-decoration: none;
+}
+body{
+  
+  text-align: center;
+}
+h3{
+  color: black;
+  background-color: antiquewhite;
+  opacity: .7;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+#orderForm{
+  margin-right: auto;
+  font-weight: bold;
+  margin-left: auto;
+  text-align: center;
+  background-color: red;
+  color: aliceblue;
+  border-radius: 10px;
+  width: 60%;
+ 
+
+}
+
+.divv{
+  background-color: black;
+  border-radius: 10px;
+  width: 9rem;
+  margin-left:auto;
+  margin-right: auto;
+  
+}
+
+.enterNumberDiv{
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: -86px;
+  background-color: rgb(7, 7, 7);
+  text-align: center;
+}
+#numberOfPizzas{
+  border-radius: 50%;
+  text-align: center;
+  height: 3rem;
+  width: 3rem;
+}
+
+#submitbtn{
+  background-color: burlywood;
+  margin-bottom: 1rem;
+  border-radius: 3px;
+}
+
+table{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#order-list{
+  position: relative;
+}
+
+tr{
+  background-color: black;
+  color: aliceblue;
+  word-spacing: 1rem;
+}
+
+#checkoutbtn{
+  background-color: chartreuse;
+  height: 2.3rem;
+  border-radius: 5px;
+  width: 14rem;
+  font-weight: bold;
+  margin-top: 1rem;
+
+}
+
+
+
   .modal {
-    position: fixed;
+    position: relative;
     text-align: center;
-    top: 50%;
+    top: 5rem;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
     transition: 300ms ease-in-out;
@@ -63,4 +161,24 @@
   #overlay.active {
     opacity: 1;
     pointer-events: all;
+  }
+
+  @media (max-width : 541px){
+    header{
+      width: 95%;
+    }
+    #orderForm{
+      width: 100%;
+    }
+    tr{
+      font-size: .8rem;
+    }
+  }
+  @media (max-width : 415px){
+    #orderForm{
+      width: 100%;
+    }
+    tr{
+      font-size: .5rem;
+    }
   }
