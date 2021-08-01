@@ -46,7 +46,7 @@ h3{
   background-color: red;
   color: aliceblue;
   border-radius: 10px;
-  width: 60%;
+  width: 70%;
  
 
 }
@@ -60,6 +60,11 @@ li{
   display: inline;
   flex: 24%;
   
+}
+.menu-p{
+  font-size: .9rem;
+  background-color: rgb(0, 0, 0);
+  margin: .2rem;
 }
 #pricebtn{
   background-color: black;
@@ -185,7 +190,7 @@ tr{
 
   @media (max-width : 541px){
     header{
-      width: 95%;
+      width: 98%;
     }
     #orderForm{
       width: 100%;
@@ -196,14 +201,32 @@ tr{
   }
   @media (max-width : 415px){
     #orderForm{
-      width: 100%;
+      width: 105%;
     }
     tr{
       font-size: .5rem;
     }
   }
+
+  
+  @media (max-width : 415px){
+    ul{
+      
+      font-size: .9rem;
+    }
+    .menu-p{
+      font-size: .7rem;
+
+    }
+    
+  }
+
   @media (max-width : 321px){
+    ul{
+      display: initial;
+    }
     li{
       font-size: .7rem;
     }
+   
   }
