@@ -14,6 +14,7 @@
 #thankyouPage{
   font-family: 'Courier New', Courier, monospace;
   background: url("img/pizza6.jpg");
+  height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
 
