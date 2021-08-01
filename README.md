@@ -1,11 +1,11 @@
-# PIZZA MANYATTA 
+# THE MARATHON PIZZA SHOP
 
-#### pizza manyatta website, 2021
+#### the marathon pizza shop website, 2021
 
 #### By Keith Kirui
 
 ## Description
-This is the Pizza Manyatta website. It is a Web App that allows users to make multiple orders of pizza. Various variations can be selected and submitted by the user.
+This is the marathon pizza shop website. It is a Web App that allows users to make multiple orders of pizza. Various variations can be selected and submitted by the user.
 
 ## Setup/Installation Requirements
 * Clone the repository
